@@ -63,5 +63,27 @@ const healthMessages = [
     "I am constantly improving and evolving into the best version of myself.",
     "Success and prosperity flow effortlessly to me."
   ];
+
+  // Function to generate a random message
+function getRandomMessage(category) {
+  switch (category) {
+    case "health":
+      return healthMessages[Math.floor(Math.random() * healthMessages.length)];
+    case "beauty":
+      return beautyMessages[Math.floor(Math.random() * beautyMessages.length)];
+    case "wealth":
+      return wealthMessages[Math.floor(Math.random() * wealthMessages.length)];
+    case "love":
+      return loveMessages[Math.floor(Math.random() * loveMessages.length)];
+    case "success":
+      return successMessages[Math.floor(Math.random() * successMessages.length)];
+    default:
+      return "Invalid category. Please choose: health, beauty, wealth, love, or success.";
+  }
+}
+
+// Example usage
+console.log(getRandomMessage("wealth")); // Outputs a random wealth message
+console.log(getRandomMessage("success"));   // Outputs a random love message
   
   

@@ -86,4 +86,23 @@ function getRandomMessage(category) {
 console.log(getRandomMessage("wealth")); // Outputs a random wealth message
 console.log(getRandomMessage("success"));   // Outputs a random love message
   
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const getStartedBtn = document.getElementById("getStartedBtn");
+  const categoryContainer = document.getElementById("categoryContainer");
+  const generateBtn = document.getElementById("generateBtn");
+  const categorySelect = document.getElementById("categorySelect");
+  const messageDiv = document.getElementById("message");
+
+  // Show the dropdown when "Get Started" is clicked
+  getStartedBtn.addEventListener("click", function () {
+    categoryContainer.style.display = "block";
+  });
+
+  // Generate a message when "Generate Manifestation" is clicked
+  generateBtn.addEventListener("click", function () {
+    const selectedCategory = categorySelect.value;
+    const message = getRandomMessage(selectedCategory);
+    messageDiv.textContent = message;
+  });
+});
+ 

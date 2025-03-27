@@ -12,6 +12,7 @@ body [
     color: #333;
     text-align: center;
     margin-top: 50px;
+    border: #333 2px solid;
   }
 
   /* Add shimmer effect to message */

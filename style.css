@@ -1,5 +1,26 @@
 /* Add shimmer effect to message */
-@keyframes shimmer {
+body [
+    font-family="sans-serif"] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  /* Add shimmer effect to message */
+  .message {
+    font-size: 1.4em;
+    color: #444; /* lighter grey for message text */
+    font-weight: bold;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: shimmer 2s infinite;
+  }
+
+  /* Shimmer animation */
+    @keyframes shimmer {
     0% {
       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
     }
